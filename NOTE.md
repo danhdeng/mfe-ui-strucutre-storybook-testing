@@ -128,10 +128,20 @@ pnpm i react-router-dom
 cd packages
 cp -r ui store
 
+# rename the name attribute value to store
+ "name": "store",
 
+# remove all unrelated devdependencies packages in the package.json
 # remove all devDependencies package and then add zustand for state management
 
 pnpm add zustand
+
+# copy the movie app to playlist app, change package name to be playlist
+
+# add @craco/craco to both movies and playlist app
+
+pnpm add @craco/craco -D
+
 
 
 

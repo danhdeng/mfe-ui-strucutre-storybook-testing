@@ -11,23 +11,22 @@
     "@types/node": "^16.11.36",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.5",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-scripts": "5.0.1",
-    "tsconfig": "workspace:*",
-    "typescript": "^4.7.2",
-    "ui": "workspace.*",
-    "store": "workspace.*",
     "card": "workspace.*",
     "movie-content": "workspace.*",
     "playlist-content": "workspace.*",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "store": "workspace.*",
+    "tsconfig": "workspace:*",
+    "typescript": "^4.7.2",
+    "ui": "workspace.*",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "set PORT=3005 && react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "set PORT=3005 && craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "craco eject"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "@craco/craco": "^6.4.3",
     "@testing-library/jest-dom": "^5.16.4",
     "@types/testing-library__jest-dom": "^5.14.3"
   }
