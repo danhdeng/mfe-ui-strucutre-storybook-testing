@@ -2,7 +2,7 @@ const {ModuleFederationPlugin} =require("webpack").container;
 
 const deps=require("./package.json").dependencies;
 
-module.export = () => ({
+module.exports = () => ({
   webpack: {
     configure: {
       output: {
@@ -14,8 +14,8 @@ module.export = () => ({
         new ModuleFederationPlugin({
           name: 'playlist',
           filename: 'remoteEntry.js',
-          exposes: {
-            './playlist': './src/playlist',
+           remotes: {
+            movies: "movies@http://localhost:3006/remoteEntry.js",
           },
           shared: {
             ...deps,
@@ -34,12 +34,16 @@ module.export = () => ({
             ui: {
               singleton: true,
             },
-            react: {
+            store: {
               singleton: true,
             },
-            "react-dom" : {
+            react: {
               singleton: true,
-              requireVersion:deps["react-dom"],
+              requiredVersion:deps.react,
+            },
+            "react-dom" :{
+              singleton: true,
+              requiredVersion:deps["react-dom"],
             },
           },
         }),
