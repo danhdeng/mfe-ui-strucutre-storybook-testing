@@ -1,15 +1,19 @@
 import * as React from 'react';
-import {AppShell as MantineAppShell, Header, MantineProvider, Navbar, Title} from "@mantine/core";
+import {AppShell as MantineAppShell, Header, MantineProvider, Navbar, Text, Title} from "@mantine/core";
 import {Outlet, BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 import { NavLink, NavRoute } from './types/routeType';
 import { MainLink } from './MainLink';
+
+import {useStore} from 'store';
 
 export const AppShell: React.FunctionComponent<{
   title: string;
   colorScheme?: 'light' | 'dark';
   navLinks:NavLink[]
   routes: NavRoute[];
-}> = ({ title, colorScheme, routes, navLinks }) => (
+}> = ({ title, colorScheme, routes, navLinks }) =>{
+  const {movies}=useStore();
+  return (
   <BrowserRouter>
     <MantineProvider withGlobalStyles withNormalizeCSS theme={{ colorScheme }}>
       <MantineAppShell
@@ -35,7 +39,8 @@ export const AppShell: React.FunctionComponent<{
               },
             })}
           >
-            <Title>{title}</Title>
+            <Title sx={{flexGrow:1}}>{title}</Title>
+            <Text size="xl">{movies.length} selected</Text>
           </Header>
         }
       >
@@ -52,4 +57,4 @@ export const AppShell: React.FunctionComponent<{
       </MantineAppShell>
     </MantineProvider>
   </BrowserRouter>
-);
+)};

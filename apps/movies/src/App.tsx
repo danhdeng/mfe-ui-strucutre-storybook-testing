@@ -1,8 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 import {AppShell} from 'ui';
-
+import {MoviesContent} from 'movie-content';
 function App() {
   return (
     <div>
@@ -12,7 +10,7 @@ function App() {
         routes={[
           {
             path: '/',
-            element: () => <div>this is home page</div>,
+            element: MoviesContent,
           },
           {
             path: '/playlist',

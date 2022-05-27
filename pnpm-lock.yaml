@@ -51,9 +51,12 @@ importers:
       '@types/react': ^18.0.9
       '@types/react-dom': ^18.0.5
       '@types/testing-library__jest-dom': ^5.14.3
+      card: workspace.*
+      movie-content: workspace.*
       react: ^18.1.0
       react-dom: ^18.1.0
       react-scripts: 5.0.1
+      store: workspace.*
       tsconfig: workspace:*
       typescript: ^4.7.2
       ui: workspace.*
@@ -67,9 +70,12 @@ importers:
       '@types/node': 16.11.36
       '@types/react': 18.0.9
       '@types/react-dom': 18.0.5
+      card: link:../../packages/card
+      movie-content: link:../../packages/movie-content
       react: 18.1.0
       react-dom: 18.1.0_react@18.1.0
       react-scripts: 5.0.1_kyqnejrpc2rvfrn3drtswmketi
+      store: link:../../packages/store
       tsconfig: link:../../packages/tsconfig
       typescript: 4.7.2
       ui: link:../../packages/ui
@@ -105,6 +111,31 @@ importers:
       tsconfig: link:../../packages/tsconfig
       typescript: 4.7.2
 
+  packages/card:
+    specifiers:
+      '@mantine/core': ^4.2.6
+      '@mantine/hooks': ^4.2.6
+      '@types/react': ^18.0.9
+      '@types/react-dom': ^18.0.5
+      eslint: ^7.32.0
+      eslint-config-custom: workspace:*
+      react: ^18.1.0
+      store: workspace:*
+      tsconfig: workspace:*
+      typescript: ^4.5.2
+    dependencies:
+      '@mantine/core': 4.2.6_jkwx5tgufppux3ftiszr3x2lf4
+      '@mantine/hooks': 4.2.6_react@18.1.0
+    devDependencies:
+      '@types/react': 18.0.9
+      '@types/react-dom': 18.0.5
+      eslint: 7.32.0
+      eslint-config-custom: link:../eslint-config-acme
+      react: 18.1.0
+      store: link:../store
+      tsconfig: link:../tsconfig
+      typescript: 4.7.2
+
   packages/eslint-config-acme:
     specifiers:
       eslint-config-next: ^12.0.8
@@ -114,6 +145,79 @@ importers:
       eslint-config-next: 12.1.6
       eslint-config-prettier: 8.5.0
       eslint-plugin-react: 7.28.0
+
+  packages/movie-content:
+    specifiers:
+      '@mantine/core': ^4.2.6
+      '@mantine/hooks': ^4.2.6
+      '@types/react': ^18.0.9
+      '@types/react-dom': ^18.0.5
+      card: workspace:*
+      eslint: ^7.32.0
+      eslint-config-custom: workspace:*
+      react: ^18.1.0
+      store: workspace:*
+      tsconfig: workspace:*
+      typescript: ^4.5.2
+    dependencies:
+      '@mantine/core': 4.2.6_jkwx5tgufppux3ftiszr3x2lf4
+      '@mantine/hooks': 4.2.6_react@18.1.0
+    devDependencies:
+      '@types/react': 18.0.9
+      '@types/react-dom': 18.0.5
+      card: link:../card
+      eslint: 7.32.0
+      eslint-config-custom: link:../eslint-config-acme
+      react: 18.1.0
+      store: link:../store
+      tsconfig: link:../tsconfig
+      typescript: 4.7.2
+
+  packages/playlist-content:
+    specifiers:
+      '@mantine/core': ^4.2.6
+      '@mantine/hooks': ^4.2.6
+      '@types/react': ^18.0.9
+      '@types/react-dom': ^18.0.5
+      eslint: ^7.32.0
+      eslint-config-custom: workspace:*
+      react: ^18.1.0
+      store: workspace:*
+      tsconfig: workspace:*
+      typescript: ^4.5.2
+    dependencies:
+      '@mantine/core': 4.2.6_jkwx5tgufppux3ftiszr3x2lf4
+      '@mantine/hooks': 4.2.6_react@18.1.0
+    devDependencies:
+      '@types/react': 18.0.9
+      '@types/react-dom': 18.0.5
+      eslint: 7.32.0
+      eslint-config-custom: link:../eslint-config-acme
+      react: 18.1.0
+      store: link:../store
+      tsconfig: link:../tsconfig
+      typescript: 4.7.2
+
+  packages/store:
+    specifiers:
+      '@types/react': ^18.0.9
+      '@types/react-dom': ^18.0.5
+      eslint: ^7.32.0
+      eslint-config-custom: workspace:*
+      react: ^18.1.0
+      tsconfig: workspace:*
+      typescript: ^4.5.2
+      zustand: 4.0.0-rc.1
+    dependencies:
+      zustand: 4.0.0-rc.1_react@18.1.0
+    devDependencies:
+      '@types/react': 18.0.9
+      '@types/react-dom': 18.0.5
+      eslint: 7.32.0
+      eslint-config-custom: link:../eslint-config-acme
+      react: 18.1.0
+      tsconfig: link:../tsconfig
+      typescript: 4.7.2
 
   packages/tsconfig:
     specifiers: {}
@@ -128,6 +232,7 @@ importers:
       eslint-config-custom: workspace:*
       react: ^18.1.0
       react-router-dom: ^6.3.0
+      store: workspace:*
       tsconfig: workspace:*
       typescript: ^4.5.2
     dependencies:
@@ -140,6 +245,7 @@ importers:
       eslint: 7.32.0
       eslint-config-custom: link:../eslint-config-acme
       react: 18.1.0
+      store: link:../store
       tsconfig: link:../tsconfig
       typescript: 4.7.2
 
@@ -10357,6 +10463,14 @@ packages:
       react: 17.0.2
     dev: false
 
+  /use-sync-external-store/1.1.0_react@18.1.0:
+    resolution: {integrity: sha512-SEnieB2FPKEVne66NpXPd1Np4R1lTNKfjuy3XdIoPQKYBAFdzbzSZlSn1KJZUiihQLQC5Znot4SBz1EOTBwQAQ==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.1.0
+    dev: false
+
   /util-deprecate/1.0.2:
     resolution: {integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=}
     dev: false
@@ -10920,4 +11034,20 @@ packages:
   /yocto-queue/0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+    dev: false
+
+  /zustand/4.0.0-rc.1_react@18.1.0:
+    resolution: {integrity: sha512-qgcs7zLqBdHu0PuT3GW4WCIY5SgXdsv30GQMu9Qpp1BA2aS+sNS8l4x0hWuyEhjXkN+701aGWawhKDv6oWJAcw==}
+    engines: {node: '>=12.7.0'}
+    peerDependencies:
+      immer: '>=9.0'
+      react: '>=16.8'
+    peerDependenciesMeta:
+      immer:
+        optional: true
+      react:
+        optional: true
+    dependencies:
+      react: 18.1.0
+      use-sync-external-store: 1.1.0_react@18.1.0
     dev: false

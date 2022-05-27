@@ -112,7 +112,7 @@ export const AppShell: React.FunctionComponent =() => (
           },
         })}
       >
-        <Title>{title}</Title>
+        <Title>{title}</title>
       </Header>
       <div>Hello World</div>
     </MantineAppShell>
@@ -123,6 +123,18 @@ export const AppShell: React.FunctionComponent =() => (
 # add react-router to ui package
 
 pnpm i react-router-dom
+
+# copy ui package to setup the store project 
+cd packages
+cp -r ui store
+
+
+# remove all devDependencies package and then add zustand for state management
+
+pnpm add zustand
+
+
+
 
 
 

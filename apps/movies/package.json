@@ -17,6 +17,9 @@
     "tsconfig": "workspace:*",
     "typescript": "^4.7.2",
     "ui": "workspace.*",
+    "store": "workspace.*",
+    "card": "workspace.*",
+    "movie-content": "workspace.*",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
