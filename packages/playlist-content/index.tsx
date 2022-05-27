@@ -1,7 +1,5 @@
 import React from 'react'
+import {PlaylistContent} from './PlaylistContent';
 
-export const PlaylistContent = () => {
-  return (
-    <div>PlaylistContent</div>
-  )
-}
+export { PlaylistContent }
+

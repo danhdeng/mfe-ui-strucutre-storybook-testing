@@ -17,6 +17,7 @@
     "react": "^18.1.0",
     "tsconfig": "workspace:*",
     "store": "workspace:*",
+    "card": "workspace:*",
     "typescript": "^4.5.2"
   },
   "dependencies": {

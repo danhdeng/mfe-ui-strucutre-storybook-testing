@@ -1,13 +1,12 @@
 import React from 'react';
 import {AppShell} from 'ui';
+import {PlaylistContent} from 'playlist-content';
 import {MoviesContent} from 'movie-content';
-import { PlaylistContent } from 'playlist-content';
-
 function App() {
   return (
     <div>
       <AppShell
-        title="Movies"
+        title="Playlist"
         colorScheme="dark"
         routes={[
           {

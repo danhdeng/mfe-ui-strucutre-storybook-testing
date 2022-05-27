@@ -53,6 +53,7 @@ importers:
       '@types/testing-library__jest-dom': ^5.14.3
       card: workspace.*
       movie-content: workspace.*
+      playlist-content: workspace.*
       react: ^18.1.0
       react-dom: ^18.1.0
       react-scripts: 5.0.1
@@ -72,6 +73,54 @@ importers:
       '@types/react-dom': 18.0.5
       card: link:../../packages/card
       movie-content: link:../../packages/movie-content
+      playlist-content: link:../../packages/playlist-content
+      react: 18.1.0
+      react-dom: 18.1.0_react@18.1.0
+      react-scripts: 5.0.1_kyqnejrpc2rvfrn3drtswmketi
+      store: link:../../packages/store
+      tsconfig: link:../../packages/tsconfig
+      typescript: 4.7.2
+      ui: link:../../packages/ui
+      web-vitals: 2.1.4
+    devDependencies:
+      '@testing-library/jest-dom': 5.16.4
+      '@types/testing-library__jest-dom': 5.14.3
+
+  apps/playlist:
+    specifiers:
+      '@mantine/core': ^4.2.6
+      '@mantine/hooks': ^4.2.6
+      '@testing-library/jest-dom': ^5.16.4
+      '@testing-library/react': ^13.2.0
+      '@testing-library/user-event': ^13.5.0
+      '@types/jest': ^27.5.1
+      '@types/node': ^16.11.36
+      '@types/react': ^18.0.9
+      '@types/react-dom': ^18.0.5
+      '@types/testing-library__jest-dom': ^5.14.3
+      card: workspace.*
+      movie-content: workspace.*
+      playlist-content: workspace.*
+      react: ^18.1.0
+      react-dom: ^18.1.0
+      react-scripts: 5.0.1
+      store: workspace.*
+      tsconfig: workspace:*
+      typescript: ^4.7.2
+      ui: workspace.*
+      web-vitals: ^2.1.4
+    dependencies:
+      '@mantine/core': 4.2.6_4aq3fijiwcnee2kgs4oyh3fbtq
+      '@mantine/hooks': 4.2.6_react@18.1.0
+      '@testing-library/react': 13.2.0_ef5jwxihqo6n7gxfmzogljlgcm
+      '@testing-library/user-event': 13.5.0
+      '@types/jest': 27.5.1
+      '@types/node': 16.11.36
+      '@types/react': 18.0.9
+      '@types/react-dom': 18.0.5
+      card: link:../../packages/card
+      movie-content: link:../../packages/movie-content
+      playlist-content: link:../../packages/playlist-content
       react: 18.1.0
       react-dom: 18.1.0_react@18.1.0
       react-scripts: 5.0.1_kyqnejrpc2rvfrn3drtswmketi
@@ -179,6 +228,7 @@ importers:
       '@mantine/hooks': ^4.2.6
       '@types/react': ^18.0.9
       '@types/react-dom': ^18.0.5
+      card: workspace:*
       eslint: ^7.32.0
       eslint-config-custom: workspace:*
       react: ^18.1.0
@@ -191,6 +241,7 @@ importers:
     devDependencies:
       '@types/react': 18.0.9
       '@types/react-dom': 18.0.5
+      card: link:../card
       eslint: 7.32.0
       eslint-config-custom: link:../eslint-config-acme
       react: 18.1.0
