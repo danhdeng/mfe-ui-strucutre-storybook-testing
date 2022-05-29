@@ -1,21 +1,24 @@
 import React from 'react';
 import {AppShell} from 'ui';
 import {PlaylistContent} from 'playlist-content';
-// import {MoviesContent} from 'movie-content';
+import ErrorBoundary from './ErrorBoundary';
 
 // @ts-ignore
-import MoviesContent from 'movies/Movies';
+// import MoviesContent from 'movies/Movies';
+const MoviesContent = React.lazy(() => import('movies/Movies'));
 
 function App() {
   return (
     <div>
       <AppShell
         title="Playlist"
-        colorScheme="dark"
+        colorScheme="light"
         routes={[
           {
             path: '/',
-            element: MoviesContent,
+            element: ()=>(
+              <ErrorBoundary><MoviesContent /></ErrorBoundary>
+            ),
           },
           {
             path: '/playlist',
