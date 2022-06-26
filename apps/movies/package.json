@@ -47,6 +47,10 @@
     ]
   },
   "devDependencies": {
-    "@craco/craco": "^6.4.3"
+    "@craco/craco": "^6.4.3",
+    "@testing-library/dom": "^8.14.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "react-scripts": "5.0.1",
+    "webpack": "^5.73.0"
   }
 }
