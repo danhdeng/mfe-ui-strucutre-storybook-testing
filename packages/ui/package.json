@@ -7,16 +7,23 @@
   "scripts": {
     "dev": "tsc --watch --outDir dist",
     "build": "tsc --outDir dist",
-    "lint": "eslint *.ts*"
+    "lint": "eslint *.ts*",
+    "storybook": "start-storybook"
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-interactions": "^6.5.9",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/react": "^6.5.9",
+    "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.5",
     "eslint": "^7.32.0",
     "eslint-config-custom": "workspace:*",
     "react": "^18.1.0",
-    "tsconfig": "workspace:*",
+    "react-dom": "^18.2.0",
     "store": "workspace:*",
+    "tsconfig": "workspace:*",
     "typescript": "^4.5.2"
   },
   "dependencies": {

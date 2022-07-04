@@ -142,6 +142,25 @@ pnpm add zustand
 
 pnpm add @craco/craco -D
 
+# add storybook ui
+
+pnpx storybook init
+
+# added the packages
+
+pnpm add @storybook/react react-dom @storybook/addon-links @storybook/addon-essentials @storybook/addon-interactions @storybook/testing-library -D
+
+# add the execute command line to launch the storybook in package.json 
+ "storybook": "start-storybook"
+
+# launch the storybook
+pnpm storybook
+
+
+
+
+
+
 
 
 
