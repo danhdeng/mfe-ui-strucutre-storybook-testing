@@ -156,7 +156,11 @@ pnpm add @storybook/react react-dom @storybook/addon-links @storybook/addon-esse
 # launch the storybook
 pnpm storybook
 
+# add testing library jest
+pnpm add jest ts-jest @types/jest @testing-library/react jest-environment-jsdom -D
 
+# setup ts-jest configuration
+pnpx ts-jest config:init
 
 
 
